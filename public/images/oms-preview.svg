@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.12)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.04)"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c084fc"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fb923c"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(60,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(120,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(180,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(240,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(300,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(360,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(420,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(480,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(540,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(600,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(660,0)"/>
+    <line x1="0" y1="0" x2="0" y2="800" stroke="white" stroke-width="1" transform="translate(720,0)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,60)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,120)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,180)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,240)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,300)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,360)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,420)"/>
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" transform="translate(0,480)"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="80" text-anchor="middle" font-family="Segoe UI, Arial" font-size="28" font-weight="700" fill="white" letter-spacing="3">ORDER MANAGEMENT SYSTEM</text>
+  <rect x="480" y="95" width="240" height="3" rx="1.5" fill="url(#green)" opacity="0.8"/>
+
+  <!-- API Gateway -->
+  <rect x="440" y="130" width="320" height="60" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.15)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="448" y="138" width="8" height="44" rx="4" fill="url(#cyan)"/>
+  <text x="600" y="165" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="600" fill="white">API Gateway</text>
+  <text x="720" y="165" text-anchor="middle" font-family="Segoe UI, Arial" font-size="11" fill="#22d3ee">REST</text>
+
+  <!-- Connection lines from gateway -->
+  <line x1="500" y1="190" x2="180" y2="260" stroke="#4ade80" stroke-width="2" opacity="0.4" stroke-dasharray="6,4"/>
+  <line x1="600" y1="190" x2="600" y2="260" stroke="#60a5fa" stroke-width="2" opacity="0.4" stroke-dasharray="6,4"/>
+  <line x1="700" y1="190" x2="1020" y2="260" stroke="#c084fc" stroke-width="2" opacity="0.4" stroke-dasharray="6,4"/>
+
+  <!-- Microservice 1: Order Service -->
+  <rect x="60" y="260" width="240" height="140" rx="12" fill="url(#card)" stroke="rgba(74,222,128,0.3)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="68" y="268" width="8" height="124" rx="4" fill="url(#green)"/>
+  <circle cx="100" cy="295" r="16" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="100" y="300" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" fill="#4ade80" font-weight="700">O</text>
+  <text x="130" y="300" font-family="Segoe UI, Arial" font-size="16" font-weight="600" fill="white">Order Service</text>
+  <text x="90" y="330" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">POST /api/orders</text>
+  <text x="90" y="350" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">GET  /api/orders/:id</text>
+  <text x="90" y="370" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">PUT  /api/orders/:id</text>
+  <rect x="90" y="382" width="60" height="8" rx="4" fill="#4ade80" opacity="0.3"/>
+
+  <!-- Microservice 2: Inventory Service -->
+  <rect x="480" y="260" width="240" height="140" rx="12" fill="url(#card)" stroke="rgba(96,165,250,0.3)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="488" y="268" width="8" height="124" rx="4" fill="url(#blue)"/>
+  <circle cx="520" cy="295" r="16" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="520" y="300" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" fill="#60a5fa" font-weight="700">I</text>
+  <text x="550" y="300" font-family="Segoe UI, Arial" font-size="16" font-weight="600" fill="white">Inventory Service</text>
+  <text x="510" y="330" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">Stock Management</text>
+  <text x="510" y="350" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">Real-time Updates</text>
+  <text x="510" y="370" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">Warehouse Sync</text>
+  <rect x="510" y="382" width="80" height="8" rx="4" fill="#60a5fa" opacity="0.3"/>
+
+  <!-- Microservice 3: Payment Service -->
+  <rect x="900" y="260" width="240" height="140" rx="12" fill="url(#card)" stroke="rgba(192,132,252,0.3)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="908" y="268" width="8" height="124" rx="4" fill="url(#purple)"/>
+  <circle cx="940" cy="295" r="16" fill="rgba(192,132,252,0.15)" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="940" y="300" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" fill="#c084fc" font-weight="700">P</text>
+  <text x="970" y="300" font-family="Segoe UI, Arial" font-size="16" font-weight="600" fill="white">Payment Service</text>
+  <text x="930" y="330" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">Transaction Handling</text>
+  <text x="930" y="350" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">Payment Gateway</text>
+  <text x="930" y="370" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">Refund Processing</text>
+  <rect x="930" y="382" width="70" height="8" rx="4" fill="#c084fc" opacity="0.3"/>
+
+  <!-- Kafka Event Bus -->
+  <rect x="200" y="440" width="800" height="55" rx="12" fill="url(#card)" stroke="rgba(251,146,60,0.4)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="600" y="472" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" font-weight="600" fill="white">Apache Kafka  -  Event Bus</text>
+  <circle cx="260" cy="467" r="6" fill="#fb923c" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="940" cy="467" r="6" fill="#fb923c" opacity="0.8">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Connection lines to Kafka -->
+  <line x1="180" y1="400" x2="350" y2="440" stroke="#fb923c" stroke-width="1.5" opacity="0.4"/>
+  <line x1="600" y1="400" x2="600" y2="440" stroke="#fb923c" stroke-width="1.5" opacity="0.4"/>
+  <line x1="1020" y1="400" x2="850" y2="440" stroke="#fb923c" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Database Layer -->
+  <line x1="350" y1="495" x2="250" y2="540" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <line x1="600" y1="495" x2="600" y2="540" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <line x1="850" y1="495" x2="950" y2="540" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+
+  <!-- MySQL DB -->
+  <rect x="130" y="540" width="200" height="80" rx="12" fill="url(#card)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <ellipse cx="230" cy="555" rx="60" ry="12" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="230" y="595" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="600" fill="white">MySQL</text>
+  <text x="230" y="612" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="rgba(255,255,255,0.4)">Orders DB</text>
+
+  <!-- MySQL DB 2 -->
+  <rect x="500" y="540" width="200" height="80" rx="12" fill="url(#card)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <ellipse cx="600" cy="555" rx="60" ry="12" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="600" y="595" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="600" fill="white">MySQL</text>
+  <text x="600" y="612" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="rgba(255,255,255,0.4)">Inventory DB</text>
+
+  <!-- MySQL DB 3 -->
+  <rect x="870" y="540" width="200" height="80" rx="12" fill="url(#card)" stroke="rgba(96,165,250,0.2)" stroke-width="1"/>
+  <ellipse cx="970" cy="555" rx="60" ry="12" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="970" y="595" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="600" fill="white">MySQL</text>
+  <text x="970" y="612" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" fill="rgba(255,255,255,0.4)">Payments DB</text>
+
+  <!-- Docker / CI/CD bar -->
+  <rect x="60" y="660" width="1080" height="50" rx="12" fill="url(#card)" stroke="rgba(34,211,238,0.2)" stroke-width="1"/>
+  <text x="200" y="690" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">Docker</text>
+  <circle cx="140" cy="685" r="5" fill="#22d3ee" opacity="0.6"/>
+  <text x="400" y="690" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">CI/CD Pipeline</text>
+  <circle cx="330" cy="685" r="5" fill="#4ade80" opacity="0.6"/>
+  <text x="600" y="690" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">Spring Boot</text>
+  <circle cx="535" cy="685" r="5" fill="#6db33f" opacity="0.6"/>
+  <text x="800" y="690" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">REST APIs</text>
+  <circle cx="740" cy="685" r="5" fill="#fb923c" opacity="0.6"/>
+  <text x="1000" y="690" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">Java 17</text>
+  <circle cx="950" cy="685" r="5" fill="#f89820" opacity="0.6"/>
+
+  <!-- Animated data flow dots -->
+  <circle r="4" fill="#4ade80" filter="url(#glow)">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M180,400 Q265,420 350,440"/>
+  </circle>
+  <circle r="4" fill="#60a5fa" filter="url(#glow)">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M600,400 L600,440"/>
+  </circle>
+  <circle r="4" fill="#c084fc" filter="url(#glow)">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M1020,400 Q935,420 850,440"/>
+  </circle>
+</svg>

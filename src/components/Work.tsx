@@ -9,14 +9,14 @@ const projects = [
     category: "Microservices Backend (Spring Boot + Kafka)",
     tools:
       "Java · Spring Boot · REST APIs · Apache Kafka · MySQL · Docker · CI/CD",
-    image: `${import.meta.env.BASE_URL}images/placeholder.webp`,
+    image: `${import.meta.env.BASE_URL}images/oms-preview.svg`,
     link: "",
   },
   {
     title: "Operating System Simulator",
     category: "C++ Projects & System Design",
     tools: "C++ · OS concepts · Job scheduling · Data structures",
-    image: `${import.meta.env.BASE_URL}images/placeholder.webp`,
+    image: `${import.meta.env.BASE_URL}images/os-simulator-preview.svg`,
     link: "",
   },
 ];

@@ -87,21 +87,23 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>MICROSERVICES & APIs</h3>
-              <h4>RESTful backends built for scale</h4>
+              <h3>BUILD & SCALE</h3>
+              <h4>Scalable Systems for Production</h4>
               <p>
-                Design and implement Spring Boot services with API security,
-                validation, and service orchestration. Build microservices with
-                Swagger/OpenAPI documentation.
+                I build backend systems with Spring Boot, Kafka,
+                REST APIs, and MySQL — production-ready,
+                scalable, and reliably deployed.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Java</div>
                 <div className="what-tags">Spring Boot</div>
                 <div className="what-tags">REST APIs</div>
-                <div className="what-tags">API Security</div>
+                <div className="what-tags">Apache Kafka</div>
                 <div className="what-tags">Microservices</div>
-                <div className="what-tags">Swagger/OpenAPI</div>
+                <div className="what-tags">MySQL</div>
+                <div className="what-tags">Docker</div>
+                <div className="what-tags">CI/CD</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -125,21 +127,21 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>KAFKA &amp; DATA PERFORMANCE</h3>
-              <h4>Event-driven systems with reliable data</h4>
+              <h3>AI & AUTOMATION</h3>
+              <h4>Workflow Intelligence for Organizations</h4>
               <p>
-                Build Kafka-based event flows and optimize MySQL schemas and
-                queries for low-latency, fault-tolerant performance. Ship with
-                Docker and CI/CD (Jenkins, GitLab CI) for repeatable releases.
+                AI specialist helping organizations automate
+                workflows — internal ops and customer-facing — so
+                teams ship faster with less manual work.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Apache Kafka</div>
-                <div className="what-tags">MySQL</div>
-                <div className="what-tags">Query Optimization</div>
-                <div className="what-tags">Docker</div>
-                <div className="what-tags">Jenkins</div>
-                <div className="what-tags">GitLab CI</div>
+                <div className="what-tags">LLMs & agents</div>
+                <div className="what-tags">Workflow design</div>
+                <div className="what-tags">RAG & retrieval</div>
+                <div className="what-tags">Evals & guardrails</div>
+                <div className="what-tags">Integrations</div>
+                <div className="what-tags">Product strategy</div>
               </div>
               <div className="what-arrow"></div>
             </div>

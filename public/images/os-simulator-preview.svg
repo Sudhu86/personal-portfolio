@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="50%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e2e"/>
+      <stop offset="100%" style="stop-color:#11111b"/>
+    </linearGradient>
+    <linearGradient id="headerBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2d2d44"/>
+      <stop offset="100%" style="stop-color:#1e1e2e"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#89b4fa"/>
+      <stop offset="100%" style="stop-color:#74c7ec"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a6e3a1"/>
+      <stop offset="100%" style="stop-color:#94e2d5"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="200" fill="rgba(137,180,250,0.03)"/>
+  <circle cx="1100" cy="700" r="250" fill="rgba(166,227,161,0.03)"/>
+
+  <!-- Main Terminal Window -->
+  <rect x="60" y="40" width="700" height="500" rx="12" fill="url(#termBg)" stroke="rgba(255,255,255,0.1)" stroke-width="1" filter="url(#shadow)"/>
+
+  <!-- Terminal Header -->
+  <rect x="60" y="40" width="700" height="40" rx="12" fill="url(#headerBg)"/>
+  <rect x="60" y="68" width="700" height="14" fill="url(#headerBg)"/>
+  <circle cx="88" cy="60" r="7" fill="#f38ba8"/>
+  <circle cx="112" cy="60" r="7" fill="#f9e2af"/>
+  <circle cx="136" cy="60" r="7" fill="#a6e3a1"/>
+  <text x="410" y="65" text-anchor="middle" font-family="monospace" font-size="13" fill="rgba(255,255,255,0.5)">os-simulator - bash</text>
+
+  <!-- Terminal Content -->
+  <text x="85" y="110" font-family="monospace" font-size="14" fill="#89b4fa">$</text>
+  <text x="100" y="110" font-family="monospace" font-size="14" fill="#cdd6f4"> ./os_simulator --mode=scheduler</text>
+
+  <text x="85" y="140" font-family="monospace" font-size="13" fill="#a6e3a1">[INFO]</text>
+  <text x="145" y="140" font-family="monospace" font-size="13" fill="#bac2de"> OS Simulator v2.0 initialized</text>
+
+  <text x="85" y="165" font-family="monospace" font-size="13" fill="#a6e3a1">[INFO]</text>
+  <text x="145" y="165" font-family="monospace" font-size="13" fill="#bac2de"> Loading CPU scheduler module...</text>
+
+  <text x="85" y="195" font-family="monospace" font-size="13" fill="#f9e2af">[SCHEDULER]</text>
+  <text x="200" y="195" font-family="monospace" font-size="13" fill="#bac2de"> Algorithm: Round Robin (quantum=4ms)</text>
+
+  <!-- Process Table -->
+  <text x="85" y="230" font-family="monospace" font-size="13" fill="#89b4fa">  PID  │ Priority │ Burst │  State    │ Wait</text>
+  <text x="85" y="250" font-family="monospace" font-size="13" fill="rgba(255,255,255,0.2)">  ─────┼──────────┼───────┼───────────┼──────</text>
+  <text x="85" y="270" font-family="monospace" font-size="13" fill="#a6e3a1">  P001 │    1     │  8ms  │ RUNNING   │  0ms</text>
+  <text x="85" y="290" font-family="monospace" font-size="13" fill="#f9e2af">  P002 │    3     │ 12ms  │ READY     │  4ms</text>
+  <text x="85" y="310" font-family="monospace" font-size="13" fill="#f9e2af">  P003 │    2     │  6ms  │ READY     │  4ms</text>
+  <text x="85" y="330" font-family="monospace" font-size="13" fill="#f38ba8">  P004 │    4     │ 10ms  │ WAITING   │  8ms</text>
+  <text x="85" y="350" font-family="monospace" font-size="13" fill="#89b4fa">  P005 │    1     │  4ms  │ NEW       │  0ms</text>
+
+  <text x="85" y="385" font-family="monospace" font-size="13" fill="#f9e2af">[MEMORY]</text>
+  <text x="175" y="385" font-family="monospace" font-size="13" fill="#bac2de"> Page Table updated - Frame allocation:</text>
+
+  <!-- Memory blocks visualization -->
+  <rect x="85" y="400" width="40" height="25" rx="3" fill="#a6e3a1" opacity="0.8"/>
+  <text x="105" y="417" text-anchor="middle" font-family="monospace" font-size="9" fill="#1e1e2e" font-weight="700">P1</text>
+  <rect x="130" y="400" width="60" height="25" rx="3" fill="#89b4fa" opacity="0.8"/>
+  <text x="160" y="417" text-anchor="middle" font-family="monospace" font-size="9" fill="#1e1e2e" font-weight="700">P2</text>
+  <rect x="195" y="400" width="35" height="25" rx="3" fill="#f9e2af" opacity="0.8"/>
+  <text x="212" y="417" text-anchor="middle" font-family="monospace" font-size="9" fill="#1e1e2e" font-weight="700">P3</text>
+  <rect x="235" y="400" width="25" height="25" rx="3" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="265" y="400" width="50" height="25" rx="3" fill="#f38ba8" opacity="0.8"/>
+  <text x="290" y="417" text-anchor="middle" font-family="monospace" font-size="9" fill="#1e1e2e" font-weight="700">P4</text>
+  <rect x="320" y="400" width="25" height="25" rx="3" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="3,2"/>
+  <rect x="350" y="400" width="45" height="25" rx="3" fill="#cba6f7" opacity="0.8"/>
+  <text x="372" y="417" text-anchor="middle" font-family="monospace" font-size="9" fill="#1e1e2e" font-weight="700">P5</text>
+  <rect x="400" y="400" width="80" height="25" rx="3" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="440" y="417" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.3)">FREE</text>
+
+  <text x="85" y="455" font-family="monospace" font-size="13" fill="#a6e3a1">[DISK]</text>
+  <text x="140" y="455" font-family="monospace" font-size="13" fill="#bac2de"> I/O Scheduling: C-SCAN algorithm active</text>
+
+  <!-- Blinking cursor -->
+  <text x="85" y="490" font-family="monospace" font-size="14" fill="#89b4fa">$</text>
+  <rect x="100" y="478" width="10" height="17" fill="#89b4fa" opacity="0.8">
+    <animate attributeName="opacity" values="0;0.8;0" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Right side - CPU Scheduling Gantt Chart -->
+  <rect x="800" y="40" width="340" height="220" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="970" y="75" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="600" fill="white">CPU Scheduling - Gantt Chart</text>
+
+  <!-- Gantt bars -->
+  <text x="820" y="110" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">0ms</text>
+  <text x="1100" y="110" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.5)">20ms</text>
+
+  <rect x="855" y="120" width="60" height="22" rx="4" fill="#a6e3a1" opacity="0.8"/>
+  <text x="885" y="135" text-anchor="middle" font-family="monospace" font-size="10" fill="#1e1e2e" font-weight="600">P1</text>
+  <rect x="920" y="120" width="60" height="22" rx="4" fill="#89b4fa" opacity="0.8"/>
+  <text x="950" y="135" text-anchor="middle" font-family="monospace" font-size="10" fill="#1e1e2e" font-weight="600">P2</text>
+  <rect x="985" y="120" width="45" height="22" rx="4" fill="#f9e2af" opacity="0.8"/>
+  <text x="1007" y="135" text-anchor="middle" font-family="monospace" font-size="10" fill="#1e1e2e" font-weight="600">P3</text>
+  <rect x="1035" y="120" width="60" height="22" rx="4" fill="#a6e3a1" opacity="0.8"/>
+  <text x="1065" y="135" text-anchor="middle" font-family="monospace" font-size="10" fill="#1e1e2e" font-weight="600">P1</text>
+
+  <rect x="855" y="150" width="45" height="22" rx="4" fill="#89b4fa" opacity="0.8"/>
+  <text x="877" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#1e1e2e" font-weight="600">P2</text>
+  <rect x="905" y="150" width="50" height="22" rx="4" fill="#f38ba8" opacity="0.8"/>
+  <text x="930" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#1e1e2e" font-weight="600">P4</text>
+  <rect x="960" y="150" width="30" height="22" rx="4" fill="#cba6f7" opacity="0.8"/>
+  <text x="975" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#1e1e2e" font-weight="600">P5</text>
+  <rect x="995" y="150" width="45" height="22" rx="4" fill="#89b4fa" opacity="0.8"/>
+  <text x="1017" y="165" text-anchor="middle" font-family="monospace" font-size="10" fill="#1e1e2e" font-weight="600">P2</text>
+
+  <!-- Stats -->
+  <text x="830" y="200" font-family="monospace" font-size="11" fill="#a6e3a1">Avg Wait Time:</text>
+  <text x="960" y="200" font-family="monospace" font-size="11" fill="white">6.2ms</text>
+  <text x="830" y="220" font-family="monospace" font-size="11" fill="#89b4fa">Throughput:</text>
+  <text x="960" y="220" font-family="monospace" font-size="11" fill="white">5 proc/20ms</text>
+  <text x="830" y="240" font-family="monospace" font-size="11" fill="#f9e2af">CPU Utilization:</text>
+  <text x="960" y="240" font-family="monospace" font-size="11" fill="white">94.5%</text>
+
+  <!-- Right side - Process State Diagram -->
+  <rect x="800" y="280" width="340" height="260" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="970" y="315" text-anchor="middle" font-family="Segoe UI, Arial" font-size="15" font-weight="600" fill="white">Process State Diagram</text>
+
+  <!-- State circles -->
+  <circle cx="860" cy="370" r="28" fill="rgba(137,180,250,0.15)" stroke="#89b4fa" stroke-width="2"/>
+  <text x="860" y="375" text-anchor="middle" font-family="Segoe UI, Arial" font-size="11" font-weight="600" fill="#89b4fa">NEW</text>
+
+  <circle cx="970" cy="370" r="28" fill="rgba(249,226,175,0.15)" stroke="#f9e2af" stroke-width="2"/>
+  <text x="970" y="375" text-anchor="middle" font-family="Segoe UI, Arial" font-size="11" font-weight="600" fill="#f9e2af">READY</text>
+
+  <circle cx="1080" cy="370" r="28" fill="rgba(166,227,161,0.15)" stroke="#a6e3a1" stroke-width="2"/>
+  <text x="1080" y="375" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" font-weight="600" fill="#a6e3a1">RUNNING</text>
+
+  <circle cx="1080" cy="470" r="28" fill="rgba(243,139,168,0.15)" stroke="#f38ba8" stroke-width="2"/>
+  <text x="1080" y="475" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" font-weight="600" fill="#f38ba8">WAITING</text>
+
+  <circle cx="860" cy="470" r="28" fill="rgba(203,166,247,0.15)" stroke="#cba6f7" stroke-width="2"/>
+  <text x="860" y="475" text-anchor="middle" font-family="Segoe UI, Arial" font-size="10" font-weight="600" fill="#cba6f7">TERM</text>
+
+  <!-- State arrows -->
+  <line x1="890" y1="370" x2="940" y2="370" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="1000" y1="370" x2="1050" y2="370" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <polygon points="1050,366 1050,374 1058,370" fill="rgba(255,255,255,0.4)"/>
+
+  <line x1="1080" y1="400" x2="1080" y2="440" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <polygon points="1076,440 1084,440 1080,448" fill="rgba(255,255,255,0.4)"/>
+
+  <line x1="1050" y1="470" x2="1000" y2="400" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+
+  <line x1="1080" y1="340" x2="890" y2="460" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Animated running indicator -->
+  <circle cx="1080" cy="370" r="32" fill="none" stroke="#a6e3a1" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" values="28;36;28" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom tech stack bar -->
+  <rect x="60" y="570" width="1080" height="50" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="160" y="600" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">C++</text>
+  <circle cx="120" cy="595" r="5" fill="#00599c" opacity="0.8"/>
+  <text x="340" y="600" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">Data Structures</text>
+  <circle cx="262" cy="595" r="5" fill="#a6e3a1" opacity="0.8"/>
+  <text x="540" y="600" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">OS Concepts</text>
+  <circle cx="472" cy="595" r="5" fill="#89b4fa" opacity="0.8"/>
+  <text x="720" y="600" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">Job Scheduling</text>
+  <circle cx="648" cy="595" r="5" fill="#f9e2af" opacity="0.8"/>
+  <text x="910" y="600" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">Memory Mgmt</text>
+  <circle cx="840" cy="595" r="5" fill="#cba6f7" opacity="0.8"/>
+  <text x="1060" y="600" text-anchor="middle" font-family="Segoe UI, Arial" font-size="13" font-weight="500" fill="rgba(255,255,255,0.6)">I/O Systems</text>
+  <circle cx="1005" cy="595" r="5" fill="#f38ba8" opacity="0.8"/>
+
+  <!-- Title at bottom -->
+  <text x="600" y="680" text-anchor="middle" font-family="Segoe UI, Arial" font-size="32" font-weight="700" fill="white" letter-spacing="2">OPERATING SYSTEM SIMULATOR</text>
+  <rect x="430" y="698" width="340" height="3" rx="1.5" fill="url(#accent2)" opacity="0.6"/>
+  <text x="600" y="730" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" fill="rgba(255,255,255,0.4)">CPU Scheduling  |  Memory Management  |  Disk I/O  |  Process Lifecycle</text>
+</svg>

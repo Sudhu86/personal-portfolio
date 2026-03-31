@@ -208,9 +208,23 @@
   height: 100%;
   overflow: hidden;
 }
+.what-content-in h5,
+.what-content-flex {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+.what-noTouch:hover .what-content-in h5,
+.what-noTouch:hover .what-content-flex,
+.what-content-active .what-content-in h5,
+.what-content-active .what-content-flex {
+  opacity: 1;
+  max-height: 200px;
+}
 .what-content-in h5 {
   font-weight: 300;
-  opacity: 0.5;
+  opacity: 0;
   font-size: 12px;
   letter-spacing: 1px;
   font-family: "Geist", sans-serif;
