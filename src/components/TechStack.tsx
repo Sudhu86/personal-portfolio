@@ -11,25 +11,56 @@ import {
   RapierRigidBody,
 } from "@react-three/rapier";
 
-const textureLoader = new THREE.TextureLoader();
 const base = import.meta.env.BASE_URL;
-const imageUrls = [
-  `${base}images/react2.webp`,
-  `${base}images/next2.webp`,
-  `${base}images/node2.webp`,
-  `${base}images/express.webp`,
-  `${base}images/mongo.webp`,
-  `${base}images/mysql.webp`,
-  `${base}images/typescript.webp`,
-  `${base}images/javascript.webp`,
+
+const skills = [
+  "Java", "C++", "Spring Boot", "REST APIs", "Microservices",
+  "Apache Kafka", "MySQL", "MongoDB", "Kubernetes", "Docker",
+  "AWS", "Jenkins", "CI/CD", "GitLab", "Git",
+  "Postman", "Maven", "JUnit", "Selenium", "Playwright",
+  "API Testing", "Rest Assured", "Appium", "SDET",
+  "Splunk", "Jira", "Confluence", "Agile",
+  "IntelliJ IDEA", "SDLC Life Cycle", "Software Dev",
+  "JavaScript", "TypeScript", "React", "Node.js",
+  "Linux", "Windows/Unix",
 ];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+
+function createSkillTexture(skill: string): THREE.CanvasTexture {
+  const canvas = document.createElement("canvas");
+  canvas.width = 512;
+  canvas.height = 512;
+  const ctx = canvas.getContext("2d")!;
+
+  // Draw sphere-like gradient background
+  const gradient = ctx.createRadialGradient(256, 230, 50, 256, 256, 280);
+  gradient.addColorStop(0, "#e8f0fe");
+  gradient.addColorStop(0.5, "#c5d5ea");
+  gradient.addColorStop(0.8, "#8eaacc");
+  gradient.addColorStop(1, "#5a7da8");
+  ctx.fillStyle = gradient;
+  ctx.beginPath();
+  ctx.arc(256, 256, 256, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Draw skill name
+  ctx.fillStyle = "#1a1a2e";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+
+  // Adjust font size based on text length
+  let fontSize = 72;
+  if (skill.length > 12) fontSize = 52;
+  else if (skill.length > 8) fontSize = 60;
+
+  ctx.font = `bold ${fontSize}px Arial, sans-serif`;
+  ctx.fillText(skill, 256, 256, 460);
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  return texture;
+}
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
-
-const spheres = [...Array(30)].map(() => ({
-  scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
-}));
 
 type SphereProps = {
   vec?: THREE.Vector3;
@@ -152,41 +183,32 @@ const TechStack = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const materials = useMemo(() => {
-    return textures.map(
-      (texture) =>
-        new THREE.MeshPhysicalMaterial({
-          map: texture,
-          emissive: "#ffffff",
-          emissiveMap: texture,
-          emissiveIntensity: 0.3,
-          metalness: 0.5,
-          roughness: 1,
-          clearcoat: 0.1,
-        })
-    );
+    return skills.map((skill) => {
+      const texture = createSkillTexture(skill);
+      return new THREE.MeshPhysicalMaterial({
+        map: texture,
+        emissive: "#ffffff",
+        emissiveMap: texture,
+        emissiveIntensity: 0.3,
+        metalness: 0.5,
+        roughness: 1,
+        clearcoat: 0.1,
+      });
+    });
   }, []);
 
-  const skills = [
-    "Java", "C++", "Spring Boot", "REST APIs", "Microservices",
-    "Apache Kafka", "MySQL", "MongoDB", "Kubernetes", "Docker",
-    "AWS", "Jenkins", "CI/CD", "GitLab", "Git",
-    "Postman", "Maven", "JUnit", "Selenium", "Playwright",
-    "API Testing", "Rest Assured", "Appium", "SDET",
-    "Splunk", "Jira", "Confluence", "Agile",
-    "IntelliJ IDEA", "SDLC Life Cycle", "Software Development",
-    "JavaScript", "TypeScript", "React", "Node.js",
-    "Linux", "Windows/Unix",
-  ];
+  const spheres = useMemo(() => {
+    return skills.map((_skill, i) => ({
+      scale: [0.7, 1, 0.8, 1, 0.9][i % 5],
+      materialIndex: i,
+    }));
+  }, []);
 
   return (
     <div className="techstack">
       <h2> My Techstack</h2>
-      <div className="techstack-skills">
-        {skills.map((skill) => (
-          <span key={skill} className="techstack-tag">{skill}</span>
-        ))}
-      </div>
 
       <Canvas
         shadows
@@ -210,8 +232,8 @@ const TechStack = () => {
           {spheres.map((props, i) => (
             <SphereGeo
               key={i}
-              {...props}
-              material={materials[Math.floor(Math.random() * materials.length)]}
+              scale={props.scale}
+              material={materials[props.materialIndex]}
               isActive={isActive}
             />
           ))}
