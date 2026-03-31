@@ -124,6 +124,39 @@ body {
   text-transform: uppercase;
 }
 
+.techstack-skills {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.techstack-tag {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 5px 14px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+}
+
+.techstack-tag:hover {
+  background-color: rgba(20, 184, 166, 0.2);
+  border-color: #14b8a6;
+  color: #fff;
+}
+
 @media screen and (min-width: 768px) {
   body {
     --cWidth: 94%;

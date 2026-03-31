@@ -340,11 +340,17 @@
     margin-left: 0px;
     height: 450px;
   }
+  .what-content h4,
+  .what-content p,
   .what-content h5,
   .what-content-flex {
     opacity: 0;
     transition: 0.3s;
   }
+  .what-noTouch:hover h4,
+  .what-content-active h4,
+  .what-noTouch:hover p,
+  .what-content-active p,
   .what-noTouch:hover h5,
   .what-content-active h5,
   .what-noTouch:hover .what-content-flex,

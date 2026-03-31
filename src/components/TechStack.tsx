@@ -166,9 +166,26 @@ const TechStack = () => {
     );
   }, []);
 
+  const skills = [
+    "Java", "C++", "Spring Boot", "REST APIs", "Microservices",
+    "Apache Kafka", "MySQL", "MongoDB", "Kubernetes", "Docker",
+    "AWS", "Jenkins", "CI/CD", "GitLab", "Git",
+    "Postman", "Maven", "JUnit", "Selenium", "Playwright",
+    "API Testing", "Rest Assured", "Appium", "SDET",
+    "Splunk", "Jira", "Confluence", "Agile",
+    "IntelliJ IDEA", "SDLC Life Cycle", "Software Development",
+    "JavaScript", "TypeScript", "React", "Node.js",
+    "Linux", "Windows/Unix",
+  ];
+
   return (
     <div className="techstack">
       <h2> My Techstack</h2>
+      <div className="techstack-skills">
+        {skills.map((skill) => (
+          <span key={skill} className="techstack-tag">{skill}</span>
+        ))}
+      </div>
 
       <Canvas
         shadows
